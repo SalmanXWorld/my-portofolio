@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Salman</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              neon: "#06b6d4", // Cyan 500
+            },
+          },
+        },
+      };
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300 font-sans overflow-x-hidden"
+  >
+    <div
+      id="notif"
+      class="fixed top-10 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 translate-y-[-20px] transition-all duration-500 z-[9999] overflow-hidden"
+    >
+      <div class="flex items-center gap-2">
+        <i class="fas fa-check-circle"></i>
+        <span>Pesan Anda berhasil dikirim!</span>
+      </div>
+
+      <!-- progress bar -->
+      <div
+        id="progress"
+        class="absolute bottom-0 left-0 h-1 bg-white/70 w-full"
+      ></div>
+    </div>
+
+    <nav
+      class="glass fixed w-full top-0 z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="#"
+            class="text-2xl font-bold tracking-tighter hover:text-neon transition-colors"
+            >Porto<span class="text-neon">.</span></a
+          >
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="#home" class="hover:text-neon transition-colors">Home</a>
+            <a href="#about" class="hover:text-neon transition-colors">About</a>
+            <a href="#skills" class="hover:text-neon transition-colors"
+              >Skills</a
+            >
+            <a href="#projects" class="hover:text-neon transition-colors"
+              >Portofolio</a
+            >
+            <a href="#contact" class="hover:text-neon transition-colors"
+              >Contact</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition"
+            >
+              <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="theme-toggle-mobile"
+              class="p-2 mr-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition"
+            >
+              <i id="theme-icon-mobile" class="fas fa-moon"></i>
+            </button>
+            <button id="mobile-menu-btn" class="text-2xl focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass border-t border-slate-200 dark:border-slate-800"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col text-center">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-20 px-4"
+    >
+      <div
+        class="max-w-4xl mx-auto text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h2
+          class="text-neon font-semibold tracking-wide uppercase text-sm mb-2"
+        >
+          Halo, selamat datang!
+        </h2>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Saya<span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500"
+            >Salman muttaqin</span
+          >
+        </h1>
+        <h3
+          class="text-xl md:text-2xl font-medium mb-6 text-slate-600 dark:text-slate-400"
+        >
+          Web Developer & Network Engineer
+        </h3>
+        <p class="mb-8 text-slate-500 dark:text-slate-400 leading-relaxed">
+          Selamat datang di website saya! Saya baru mulai menekuni dunia
+          desain dan pengembangan web. Di sini, saya ingin berbagi hasil
+          belajar, proyek sederhana, dan eksperimen saya dalam menciptakan
+          tampilan yang menarik serta fungsional. Semoga setiap karya yang saya
+          buat bisa menjadi langkah kecil menuju sesuatu yang lebih besar.
+          Silakan jelajahi dan beri masukan jika berkenan!
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-2">
+            Tentang <span class="text-neon">Saya</span>
+          </h2>
+          <div class="w-16 h-1 bg-neon mx-auto rounded"></div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="md:w-1/3" data-aos="zoom-in">
+            <img
+              src="img/acab.jpg"
+              alt="About Me"
+              class="rounded-xl shadow-2xl w-full object-cover neon-card"
+            />
+          </div>
+          <div class="md:w-2/3" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+              Halo! Saya salman, seseorang yang memiliki ketertarikan besar di
+              bidang desain dan pengembangan web. Saya mulai belajar Desain
+              grafis dan membuat website karena tertarik bagaimana tampilan
+              visual dan teknologi dapat berpadu untuk menciptakan pengalaman
+              pengguna yang menarik dan nyaman. Saya senang bereksperimen dengan
+              ide baru, mencoba berbagai gaya desain, dan terus mengasah
+              kemampuan di bidang front-end development. Setiap proyek bagi saya
+              adalah kesempatan untuk belajar, tumbuh, dan berinovasi.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                class="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800"
+              >
+                <span class="block text-sm text-slate-500">Lokasi</span>
+                <span class="font-medium">Bandung, Jawa Barat, Indonesia</span>
+              </div>
+              <div
+                class="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800"
+              >
+                <span class="block text-sm text-slate-500">Minat Utama</span>
+                <span class="font-medium">Web Dev & design</span>
+              </div>
+              <div
+                class="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800"
+              >
+                <span class="block text-sm text-slate-500">Pendidikan</span>
+                <span class="font-medium">Teknik Komputer dan Jaringan</span>
+              </div>
+              <div
+                class="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800"
+              >
+                <span class="block text-sm text-slate-500">Freelance</span>
+                <span class="font-medium text-neon">Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-2">
+            Keahlian <span class="text-neon">Teknis</span>
+          </h2>
+          <div class="w-16 h-1 bg-neon mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="neon-card bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">HTML & CSS</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+              Responsive design, Flexbox, Grid, Glassmorphism.
+            </p>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div
+                class="bg-orange-500 h-2 rounded-full"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="neon-card bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">JavaScript</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+              DOM Manipulation, ES6+, API Integration.
+            </p>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div
+                class="bg-yellow-400 h-2 rounded-full"
+                style="width: 75%"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="neon-card bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <i class="fas fa-network-wired text-4xl text-neon mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Networking</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+              OSI Model, Subnetting, DNS, Layer 2 Switches.
+            </p>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div class="bg-neon h-2 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div
+            class="neon-card bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <i class="fas fa-server text-4xl text-green-500 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Mikrotik & Cisco</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+              Basic configuration, Routing, VLANs, Encapsulation.
+            </p>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div
+                class="bg-green-500 h-2 rounded-full"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white dark:bg-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-2">Portofolio</h2>
+          <div class="w-16 h-1 bg-neon mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="img/VIVA LOS PANTURAS.jpg" 
+              onclick="openModal(this.src)"
+              alt="Project 1"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="img/hama.jpg"
+              onclick="openModal(this.src)"
+              alt="Project 2"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="img/ipin.jpg"
+              onclick="openModal(this.src)"
+              alt="Project 3"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="img/jack.jpg"
+              onclick="openModal(this.src)"
+              alt="Project 4"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <img
+              src="img/Northenwall_20.jpg"
+              onclick="openModal(this.src)"
+              alt="Project 5"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+          <div
+            class="neon-card bg-slate-50 dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 cursor-pointer foto-project"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <img
+              src="img/633.jpg"
+              onclick="openModal(this.src)"
+              alt="Project 6"
+              class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="pt-20 pb-20 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-2">
+            Hubungi <span class="text-neon">Saya</span>
+          </h2>
+          <div class="w-16 h-1 bg-neon mx-auto rounded"></div>
+        </div>
+
+        <div
+          class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <a
+            href="mailto:salmanmuttaqin666@gmail.com"
+            target="_blank"
+            class="social-btn flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group cursor-pointer"
+          >
+            <i class="fas fa-envelope text-2xl text-red-500"></i>
+            <span
+              class="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-red-500 transition-colors"
+              >Email</span
+            >
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/salman-muttaqin"
+            target="_blank"
+            class="social-btn flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group cursor-pointer"
+          >
+            <i class="fab fa-linkedin text-2xl text-[#0077B5]"></i>
+            <span
+              class="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[#0077B5] transition-colors"
+              >LinkedIn</span
+            >
+          </a>
+
+          <a
+            href="https://github.com/SalmanXWorld"
+            target="_blank"
+            class="social-btn flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group cursor-pointer"
+          >
+            <i
+              class="fab fa-github text-2xl text-slate-800 dark:text-white"
+            ></i>
+            <span
+              class="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-neon transition-colors"
+              >GitHub</span
+            >
+          </a>
+        </div>
+
+        <div
+          class="glass p-8 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <form
+            action="#"
+            method="POST"
+            class="space-y-6"
+            onsubmit="kirimPesan(event)"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2"
+                >Pesan</label
+              >
+              <textarea
+                id="message"
+                required
+                rows="4"
+                class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition"
+                placeholder="Tulis pesan Anda di sini..."
+              ></textarea>
+            </div>
+            <button
+              id="btnKirim"
+              type="submit"
+              class="w-full py-3 bg-neon text-white font-semibold rounded-lg"
+            >
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-6 text-center text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800"
+    >
+      <p>&copy; 2026 Salman Muttaqin.</p>
+    </footer>
+
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-neon text-white shadow-lg shadow-cyan-500/50 translate-y-20 opacity-0 transition-all duration-500 hover:scale-110 focus:outline-none group"
+    >
+      <i
+        class="fas fa-arrow-up group-hover:-translate-y-1 transition-transform"
+      ></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <div id="modalFoto" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/95 backdrop-blur-sm p-4" onclick="closeModal()">
+    
+    <span onclick="closeModal(); event.stopPropagation();" class="absolute top-8 right-8 text-white text-5xl cursor-pointer z-[1000]">&times;</span>
+    
+    <img id="fotoGede" src="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border-2 border-white/20" onclick="event.stopPropagation()">
+
+    <button onclick="event.stopPropagation(); changeImage(-1)" class="absolute left-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]">&lsaquo;</button>
+    <button onclick="event.stopPropagation(); changeImage(1)" class="absolute right-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]">&rsaquo;</button>
+</div>
+  </body>
+</html>
