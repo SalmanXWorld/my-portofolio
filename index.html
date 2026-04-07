@@ -2,7 +2,11 @@
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="Website portofolio resmi salman muttaqin, initial-scale=1.0"
+    />
+    <link rel="icon" type="image/png" href="img/logo1.png" />
     <title>Portofolio | Salman</title>
 
     <link
@@ -59,12 +63,13 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <a 
-  href="#" 
-  class="flex items-center"
->
-  <img src="img/logo1.png" alt="Logo" class="h-8 md:h-10 w-auto object-contain transition-all duration-300 dark:invert">
-</a>
+          <a href="#" class="flex items-center">
+            <img
+              src="img/logo1.png"
+              alt="Logo"
+              class="h-8 md:h-10 w-auto object-contain transition-all duration-300 dark:invert"
+            />
+          </a>
 
           <div class="hidden md:flex space-x-8 items-center">
             <a href="#home" class="hover:text-neon transition-colors">Home</a>
@@ -149,7 +154,8 @@
           Halo, selamat datang!
         </h2>
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          Saya<span
+          Saya
+          <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500"
             >Salman muttaqin</span
           >
@@ -160,12 +166,12 @@
           Web Developer & Network Engineer
         </h3>
         <p class="mb-8 text-slate-500 dark:text-slate-400 leading-relaxed">
-          Selamat datang di website saya! Saya baru mulai menekuni dunia
-          desain dan pengembangan web. Di sini, saya ingin berbagi hasil
-          belajar, proyek sederhana, dan eksperimen saya dalam menciptakan
-          tampilan yang menarik serta fungsional. Semoga setiap karya yang saya
-          buat bisa menjadi langkah kecil menuju sesuatu yang lebih besar.
-          Silakan jelajahi dan beri masukan jika berkenan!
+          Selamat datang di website saya! Saya baru mulai menekuni dunia desain
+          dan pengembangan web. Di sini, saya ingin berbagi hasil belajar,
+          proyek sederhana, dan eksperimen saya dalam menciptakan tampilan yang
+          menarik serta fungsional. Semoga setiap karya yang saya buat bisa
+          menjadi langkah kecil menuju sesuatu yang lebih besar. Silakan
+          jelajahi dan beri masukan jika berkenan!
         </p>
       </div>
     </section>
@@ -324,7 +330,7 @@
             data-aos-delay="100"
           >
             <img
-              src="img/VIVA LOS PANTURAS.jpg" 
+              src="img/VIVA LOS PANTURAS.jpg"
               onclick="openModal(this.src)"
               alt="Project 1"
               class="w-full h-full object-cover aspect-square transition-transform duration-500 hover:scale-110 cursor-pointer foto-project"
@@ -525,14 +531,45 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <div id="modalFoto" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/95 backdrop-blur-sm p-4" onclick="closeModal()">
-    
-    <span onclick="closeModal(); event.stopPropagation();" class="absolute top-8 right-8 text-white text-5xl cursor-pointer z-[1000]">&times;</span>
-    
-    <img id="fotoGede" src="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border-2 border-white/20" onclick="event.stopPropagation()">
+    <div
+      id="modalFoto"
+      class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/95 backdrop-blur-sm p-4"
+      onclick="closeModal()"
+    >
+      <span
+        onclick="
+          closeModal();
+          event.stopPropagation();
+        "
+        class="absolute top-8 right-8 text-white text-5xl cursor-pointer z-[1000]"
+        >&times;</span
+      >
 
-    <button onclick="event.stopPropagation(); changeImage(-1)" class="absolute left-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]">&lsaquo;</button>
-    <button onclick="event.stopPropagation(); changeImage(1)" class="absolute right-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]">&rsaquo;</button>
-</div>
+      <img
+        id="fotoGede"
+        src=""
+        class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border-2 border-white/20"
+        onclick="event.stopPropagation()"
+      />
+
+      <button
+        onclick="
+          event.stopPropagation();
+          changeImage(-1);
+        "
+        class="absolute left-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]"
+      >
+        &lsaquo;
+      </button>
+      <button
+        onclick="
+          event.stopPropagation();
+          changeImage(1);
+        "
+        class="absolute right-5 text-white text-6xl p-4 hover:bg-white/10 rounded-full transition z-[1000]"
+      >
+        &rsaquo;
+      </button>
+    </div>
   </body>
 </html>

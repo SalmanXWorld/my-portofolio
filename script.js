@@ -206,49 +206,49 @@ function kirimPesan(event) {
 let currentImgIndex = 0;
 
 function openModal(src) {
-    const modal = document.getElementById('modalFoto');
-    const imgGede = document.getElementById('fotoGede');
-    
-    // Ambil daftar gambar TERBARU (Hanya yang ada di tag <img>)
-    const allImages = Array.from(document.querySelectorAll('img.foto-project'));
-    currentImgIndex = allImages.findIndex(img => img.src === src);
-    
-    imgGede.src = src;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+  const modal = document.getElementById("modalFoto");
+  const imgGede = document.getElementById("fotoGede");
+
+  // Ambil daftar gambar TERBARU (Hanya yang ada di tag <img>)
+  const allImages = Array.from(document.querySelectorAll("img.foto-project"));
+  currentImgIndex = allImages.findIndex((img) => img.src === src);
+
+  imgGede.src = src;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
 }
 
 function closeModal() {
-    const modal = document.getElementById('modalFoto');
-    if (modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-    }
+  const modal = document.getElementById("modalFoto");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
 }
 
 function changeImage(direction) {
-    const allImages = Array.from(document.querySelectorAll('img.foto-project'));
-    if (allImages.length === 0) return;
+  const allImages = Array.from(document.querySelectorAll("img.foto-project"));
+  if (allImages.length === 0) return;
 
-    currentImgIndex += direction;
-    
-    // Looping index
-    if (currentImgIndex >= allImages.length) currentImgIndex = 0;
-    if (currentImgIndex < 0) currentImgIndex = allImages.length - 1;
-    
-    const imgGede = document.getElementById('fotoGede');
-    if (imgGede) {
-        imgGede.src = allImages[currentImgIndex].src;
-    }
+  currentImgIndex += direction;
+
+  // Looping index
+  if (currentImgIndex >= allImages.length) currentImgIndex = 0;
+  if (currentImgIndex < 0) currentImgIndex = allImages.length - 1;
+
+  const imgGede = document.getElementById("fotoGede");
+  if (imgGede) {
+    imgGede.src = allImages[currentImgIndex].src;
+  }
 }
 
 // FITUR KEYBOARD (ESC & PANAH) - Pastikan ini di luar DOMContentLoaded kalau fungsinya global
-document.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('modalFoto');
-    // Jika modal tidak sembunyi (lagi terbuka)
-    if (modal && !modal.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowRight') changeImage(1);
-        if (e.key === 'ArrowLeft') changeImage(-1);
-    }
+document.addEventListener("keydown", (e) => {
+  const modal = document.getElementById("modalFoto");
+  // Jika modal tidak sembunyi (lagi terbuka)
+  if (modal && !modal.classList.contains("hidden")) {
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowRight") changeImage(1);
+    if (e.key === "ArrowLeft") changeImage(-1);
+  }
 });
